@@ -1,0 +1,17 @@
+index.js --->App -->header
+
+components:
+2 type of components 
+class based components
+functional components : 16.8 version 
+functiona
+arrow function
+
+custom components
+:1)components name starts with cap
+:2)file name  be same as component name
+
+3 ways to provide css in react
+inline css
+external css
+internal css
