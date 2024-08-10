@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Header } from "./components/Header";
 import Content from "./components/Content";
+import { UseStateDemo } from "./components/UseStateDemo";
+import { MapWithUseState } from "./components/MapWithUseState";
 
 function App() {
   //js
@@ -11,7 +13,9 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Content></Content>
+      {/* <Content></Content> */}
+      {/* <UseStateDemo/> */}
+      <MapWithUseState/>
     </div>
   );
 }

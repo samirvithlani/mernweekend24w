@@ -15,3 +15,9 @@ custom components
 inline css
 external css
 internal css
+
+
+:virtual dom in react js:
+
+hooks: built in function
+useState
