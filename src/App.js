@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import Content from "./components/Content";
 import { UseStateDemo } from "./components/UseStateDemo";
 import { MapWithUseState } from "./components/MapWithUseState";
+import { FormDemo1 } from "./components/FormDemo1";
 
 function App() {
   //js
@@ -15,7 +16,8 @@ function App() {
       <Header></Header>
       {/* <Content></Content> */}
       {/* <UseStateDemo/> */}
-      <MapWithUseState/>
+      {/* <MapWithUseState/> */}
+      <FormDemo1></FormDemo1>
     </div>
   );
 }
