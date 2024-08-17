@@ -6,10 +6,12 @@ export const FormDemo1 = () => {
     const [age, setage] = useState()
     const [selectedCountry, setselectedCountry] = useState("")
     const [color, setcolor] = useState("")
+    const [isSubbmited, setisSubbmited] = useState(false)
 
     const submitHandler = ()=>{
         //alert('Form Submitted')
-        alert(`Name = ${name} \n Age = ${age} \n Country = ${selectedCountry}`)
+        //alert(`Name = ${name} \n Age = ${age} \n Country = ${selectedCountry}`)
+        setisSubbmited(true)
     }
     const nameHandler = (event)=>{
         console.log(event.target.value)
@@ -46,6 +48,14 @@ export const FormDemo1 = () => {
             <div>
                 <button onClick={()=>{submitHandler()}}>SUBMIT</button>
             </div>
+
+            { isSubbmited &&
+            <div style={{color:color}}>
+                <p>Name = {name}</p>
+                <p>AGe = {age}</p>
+                <p>Country = {selectedCountry}</p>
+            </div>
+}
             
         </div>
     </div>

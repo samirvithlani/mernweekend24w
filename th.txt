@@ -21,3 +21,27 @@ internal css
 
 hooks: built in function
 useState
+
+
+
+react routing:
+
+1 page --> 2 page -->routing...
+page : url
+
+npm install react-router-dom
+
+<BrowserRouter> : to enable routing in react application
+    <Routes>
+        <route></route>
+        <route></route>
+        <route></route>
+    </Routes>
+
+</BrowserRouter>
+
+
+
+
+
+

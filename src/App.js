@@ -5,6 +5,11 @@ import Content from "./components/Content";
 import { UseStateDemo } from "./components/UseStateDemo";
 import { MapWithUseState } from "./components/MapWithUseState";
 import { FormDemo1 } from "./components/FormDemo1";
+import { Route, Routes } from "react-router-dom";
+import { NetflixHome } from "./netflix/NetflixHome";
+import { NetflixMovies } from "./netflix/NetflixMovies";
+import { NetflixShows } from "./netflix/NetflixShows";
+import { Error404 } from "./components/Error404";
 
 function App() {
   //js
@@ -14,10 +19,18 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
+      <Routes>
+        <Route path="/" element = {<h1>HOME PAGE</h1>}></Route>
+        <Route path="/netflixhome" element={<NetflixHome/>}></Route>
+        <Route path="/netflixmovies" element = {<NetflixMovies/>}></Route>
+        <Route path = "/netflixshows" element = {<NetflixShows/>}></Route>
+        {/* <Route path = "/*" element = {<h1>404 NOT FOUND</h1>}></Route> */}
+        <Route path = "/*" element  ={<Error404/>}></Route>
+      </Routes>
       {/* <Content></Content> */}
       {/* <UseStateDemo/> */}
       {/* <MapWithUseState/> */}
-      <FormDemo1></FormDemo1>
+      {/* <FormDemo1></FormDemo1> */}
     </div>
   );
 }
