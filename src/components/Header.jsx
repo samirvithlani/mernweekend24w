@@ -34,6 +34,11 @@ export const Header = () => {
                 NETFLIX SHOWS
               </Link>
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/formdemo2">
+                FORM DEMO 2
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

@@ -11,6 +11,7 @@ import { NetflixMovies } from "./netflix/NetflixMovies";
 import { NetflixShows } from "./netflix/NetflixShows";
 import { Error404 } from "./components/Error404";
 import { PlayShow } from "./netflix/PlayShow";
+import { FormDemo2 } from "./forms/FormDemo2";
 
 function App() {
   //js
@@ -26,6 +27,7 @@ function App() {
         <Route path="/netflixmovies" element = {<NetflixMovies/>}></Route>
         <Route path = "/netflixshows" element = {<NetflixShows/>}></Route>
         <Route path = "/netflixshows/playshow/:id" element = {<PlayShow/>}></Route>
+        <Route path = "/formdemo2" element = {<FormDemo2/>}></Route>
         {/* <Route path = "/*" element = {<h1>404 NOT FOUND</h1>}></Route> */}
         <Route path = "/*" element  ={<Error404/>}></Route>
       </Routes>
