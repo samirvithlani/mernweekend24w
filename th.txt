@@ -56,3 +56,19 @@ npm install react-router-dom
 
 
 
+
+input password:
+required 1 special char
+1 upper case
+1 lower case
+1 number
+
+<p> upper case </p> :green
+<p> lower case </p>
+<p> number </p>
+<p> special char </p>
+<p> length </p>
+
+<submit> display
+
+*/
