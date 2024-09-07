@@ -72,3 +72,53 @@ required 1 special char
 <submit> display
 
 */
+
+
+API : application programming interface
+
+arch: mvc
+mvvm:
+n tire application:
+
+backend : tech
+frontend : tech diff
+database : tech diff
+middleware : tech diff
+
+react
+angular
+
+db connectivety*
+
+backend: node js,spring,asp.net,php,django --> data expose using rest api : url --> json data
+zomato : map --> google map : api url -> key --> json data
+weather app: api --> call --> json data
+login with google : api -->
+
+request methods:
+GET : read data
+POST : create data
+PUT : update data
+DELETE : delete data
+PATCH : update data
+
+fetch function : to call api
+axios : to call api
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
