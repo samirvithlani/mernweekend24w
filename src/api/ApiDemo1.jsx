@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { CustomLoader } from "../components/CustomLoader";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 export const ApiDemo1 = () => {
   const getApiData = async () => {
@@ -93,6 +94,7 @@ export const ApiDemo1 = () => {
                   >
                     Delete
                   </button>
+                  <Link to ={`/updateuser/${user._id}`} className="btn btn-primary">Update</Link>
                 </td>
               </tr>
             );

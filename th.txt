@@ -108,7 +108,22 @@ axios : to call api
 
 
 
+handleSubmi(cb){
+//input data....
 
+data = {
+
+    name:"abc",
+    age:23
+}
+
+cb(data)
+
+
+
+}
+
+handleSubmi(submitHanlder)
 
 
 
