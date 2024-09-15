@@ -125,6 +125,10 @@ cb(data)
 
 handleSubmi(submitHanlder)
 
+useEffect: to handle side effect in functional component we use useEffect
+
+sideEffect: api call,dom manipulation,async call
+
 
 
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CustomLoader } from "../components/CustomLoader";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -28,21 +28,40 @@ export const ApiDemo1 = () => {
     );
     console.log("Res...", res);
     //alert("record deleted..");
-    toast.warn('User Deleted', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Bounce,
-        });
+    toast.warn("User Deleted", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
     getApiData();
   };
+
+  useEffect(() => {
+    getApiData();
+  }, []);
+
+  //const [searchquery, setsearchquery] = useState("")
+  const searchData = async (event) => {
+    console.log(event.target.value);
+    const res  = await axios.get(`https://node5.onrender.com/user/filter2`,{
+      params:{
+        name:event.target.value
+      }
+    });
+    console.log("Res...", res);
+    setusers(res.data.data);
+  }
   return (
     <div>
+      {/* <input type="search"  onChange={(event)=>{setsearchquery(event.target.value)}}/> */}
+      {/* {searchquery} */}
+      <input type="search" onChange={searchData} />
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -57,13 +76,13 @@ export const ApiDemo1 = () => {
         transition={Bounce}
       />
       {isLoading && <CustomLoader />}
-      <button
+      {/* <button
         onClick={() => {
           getApiData();
         }}
       >
         GET API DATA
-      </button>
+      </button> */}
       {message}
       <table className="table table-dark">
         <thead>
@@ -94,7 +113,12 @@ export const ApiDemo1 = () => {
                   >
                     Delete
                   </button>
-                  <Link to ={`/updateuser/${user._id}`} className="btn btn-primary">Update</Link>
+                  <Link
+                    to={`/updateuser/${user._id}`}
+                    className="btn btn-primary"
+                  >
+                    Update
+                  </Link>
                 </td>
               </tr>
             );
