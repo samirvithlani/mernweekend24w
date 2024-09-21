@@ -17,6 +17,7 @@ import { ApiDemo1 } from "./api/ApiDemo1";
 import { OmdbApi } from "./api/OmdbApi";
 import { UpdateUser } from "./api/UpdateUser";
 import { UseEffectDemo } from "./components/UseEffectDemo";
+import { ApiDemo2 } from "./api/ApiDemo2";
 
 function App() {
   //js
@@ -38,6 +39,7 @@ function App() {
         <Route path = "/omdb" element = {<OmdbApi/>}></Route>
         <Route path ="/updateuser/:id" element = {<UpdateUser/>}></Route>
         <Route path = "/useeffect" element = {<UseEffectDemo/>}></Route>
+        <Route path="/apidemo2" element={<ApiDemo2/>}></Route>
         {/* <Route path = "/*" element = {<h1>404 NOT FOUND</h1>}></Route> */}
         <Route path = "/*" element  ={<Error404/>}></Route>
       </Routes>

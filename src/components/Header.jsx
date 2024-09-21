@@ -58,6 +58,13 @@ export const Header = () => {
               <Link class="nav-link" to="/useeffect">
                 useeffect
               </Link>
+              
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/apidemo2">
+                API DEMO 2
+              </Link>
+              
             </li>
           </ul>
         </div>

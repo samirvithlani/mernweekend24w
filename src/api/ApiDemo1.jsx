@@ -9,13 +9,14 @@ export const ApiDemo1 = () => {
   const getApiData = async () => {
     setisLoading(true);
     const res = await axios.get("https://node5.onrender.com/user/user");
+    setisLoading(false);
     console.log("Res...", res);
     console.log("res", res.data);
     console.log("res", res.data.message);
     console.log("res", res.data.data);
     setmessage(res.data.message);
     setusers(res.data.data);
-    setisLoading(false);
+    
   };
   const [message, setmessage] = useState("");
   const [users, setusers] = useState([]);
