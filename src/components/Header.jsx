@@ -66,6 +66,19 @@ export const Header = () => {
               </Link>
               
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/apirev">
+                API REV
+              </Link>
+              
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/apirev2">
+                API REV 2
+              </Link>
+              
+            </li>
+            
           </ul>
         </div>
       </nav>
