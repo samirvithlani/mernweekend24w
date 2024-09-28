@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { MuButton } from '../common/MuButton';
 
 export const ApiDemo2 = () => {
 
@@ -38,6 +39,7 @@ export const ApiDemo2 = () => {
 
   return (
     <div>
+        <MuButton name="add"></MuButton>
         {/* <button onClick={addUser}>Add User</button> */}
         <form onSubmit={handleSubmit(submitHandler)}>
             <div>

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { MuButton } from '../common/MuButton'
 
 export const OmdbApi = () => {
     const [searchData, setsearchData] = useState([])
@@ -40,7 +41,8 @@ export const OmdbApi = () => {
                     return<li>
                         <img src={movie.Poster} alt=""/>
                         <h2>{movie.Title}</h2>
-                        <button onClick={()=>{fetchMovieDetail(movie.imdbID)}}><h3>{movie.imdbID}</h3></button>
+                        {/* <button onClick={()=>{fetchMovieDetail(movie.imdbID)}}><h3>{movie.imdbID}</h3></button> */}
+                        <MuButton name="add"></MuButton>
                     </li>
                 })
             }

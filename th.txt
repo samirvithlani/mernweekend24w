@@ -130,6 +130,18 @@ useEffect: to handle side effect in functional component we use useEffect
 sideEffect: api call,dom manipulation,async call
 
 
+reusbale button...
+
+applicaiton : 50 100 200 buttons -->
+
+react componet  --> reusbale
+
+component : 
+
+MyButton -->
+retutn button
+
+props
 
 
 

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { MuButton } from '../common/MuButton'
 
 export const ApiRev1 = () => {
   const [posts, setPosts] = useState([])
@@ -29,8 +30,12 @@ export const ApiRev1 = () => {
     boxSizing: 'border-box',
   }
 
+  const callApi =()=>{
+    alert("api called")
+  }
   return (
     <div>
+      <MuButton name="sub" class="btn btn-danger"clickHandler={callApi} height="60px"></MuButton>
       <h1>POSTS</h1>
       <div style={rowsContainerStyle}>
         {
