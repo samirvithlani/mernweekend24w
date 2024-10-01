@@ -4,6 +4,7 @@ import { CustomLoader } from "../components/CustomLoader";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
+import { Modal } from "react-bootstrap";
 
 export const ApiDemo1 = () => {
   const getApiData = async () => {
@@ -46,6 +47,19 @@ export const ApiDemo1 = () => {
   useEffect(() => {
     getApiData();
   }, []);
+
+  const [show, setshow] = useState(false)
+  const [user, setuser] = useState({})
+  const handleShow = async(id) => {
+
+    const res = await axios.get(`https://node5.onrender.com/user/user/${id}`);
+    //console.log("Res...", res);
+    setuser(res.data.data);
+    setshow(true)
+  }
+  const handleClose = () => {
+    setshow(false)
+  }
 
   //const [searchquery, setsearchquery] = useState("")
   const searchData = async (event) => {
@@ -120,12 +134,27 @@ export const ApiDemo1 = () => {
                   >
                     Update
                   </Link>
+                  <button onClick={()=>{handleShow(user._id)}} className="btn btn-info" style={{marginLeft:"10px"}}>info</button>
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
+      <Modal show={show}>
+            <Modal.Header>
+              <Modal.Title>User Detail</Modal.Title>
+              <button onClick={handleClose}>Close</button>
+            </Modal.Header>
+            <Modal.Body>
+              <h4>User Name ={user.name}</h4>
+              <h4>User Email ={user.email}</h4>
+              <h4>User Age ={user.age}</h4>
+              </Modal.Body>
+              <Modal.Footer>
+                <p>Footer</p>
+              </Modal.Footer>
+      </Modal>
     </div>
   );
 };
