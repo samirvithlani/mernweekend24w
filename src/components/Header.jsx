@@ -76,7 +76,11 @@ export const Header = () => {
               <Link class="nav-link" to="/apirev2">
                 API REV 2
               </Link>
-              
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/createuser">
+                Create user
+              </Link>
             </li>
             
           </ul>
