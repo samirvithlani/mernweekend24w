@@ -22,6 +22,7 @@ import { ApiRev1 } from "./api/ApiRev1";
 import { ApiRev2 } from "./api/ApiRev2";
 import { CreateUser } from "./api/CreateUser";
 import { Employees } from "./components/Employees";
+import { Notes } from "./todo/Notes";
 
 function App() {
   //js
@@ -48,6 +49,7 @@ function App() {
         <Route path="/apirev2" element ={<ApiRev2/>}></Route>
         <Route path="/createuser" element ={<CreateUser/>}></Route>
         <Route path = "/employees" element ={<Employees/>}></Route>
+        <Route path ="/notes" element = {<Notes/>}></Route>
         {/* <Route path = "/*" element = {<h1>404 NOT FOUND</h1>}></Route> */}
         <Route path = "/*" element  ={<Error404/>}></Route>
       </Routes>
